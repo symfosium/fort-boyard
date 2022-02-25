@@ -1,1 +1,1 @@
-# fort-boyard
+Small landing about fort-boyard:)
