@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 8 - Курс Зима 2022</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- HEADER -->
+		<header class="header">
+			<div class="header__container">
+				<h1 class="main__title">
+					Поболтаем о псевдоклассах и псевдоэлементах. Почитаем немного истории о
+					знаменитом
+					Форт-Боярде
+				</h1>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#dynamic" class="nav__link">Динамические псевдоклассы</a>
+						</li>
+						<li class="nav__item">
+							<a href="#cursor" class="nav__link">cursor</a>
+						</li>
+						<li class="nav__item">
+							<a href="#structure" class="nav__link">Структурные псевдоклассы</a>
+						</li>
+						<li class="nav__item">
+							<a href="#pseudoelements" class="nav__link">Псевдоэлементы</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="go__container">
+				<div id="go" class="gong"></div>
+				<div id="fail" class="fail"></div>
+				<div class="btns">
+					<a href="#go" class="go__link">Мисье Лябуль, Гонг!</a>
+					<a href="#fail" class="close__link">Эх....</a>
+					<a href="#" class="off">Скрыть</a>
+				</div>
+			</div>
+		</header>
+		<!-- ./header -->
+		<!-- MAIN -->
+		<main class="main">
+			<div class="main__container">
+				<!-- Dynamic pseudoclasses	 -->
+				<h2 id="dynamic" class="main__subtitle">Динамические псевдоклассы</h2>
+				<!-- HOVER -->
+				<div class="hover__container">
+					<h3 class="hover__title h3-titles">:hover</h3>
+					<div class="hover__text">
+						<p>
+							Определяет стиль элемента при наведении на него курсора мыши, но при этом элемент еще не
+							активирован, иными словами кнопка мыши не нажата.
+						</p>
+						<p>
+							Первая идея о решении построить форт появилась еще в 1666 году, но окончательно реализовать ее
+							удалось только в 1857 году.
+						</p>
+					</div>
+					<div class="hover__examples">
+						<p>
+							Повторим гениальную игру Макса, главное, дойти до конца! Пожалуйста, веди мышкой по линии!
+						</p>
+						<div class="game">
+							<div class="game__block1"></div>
+							<div class="game__block2"></div>
+							<div class="game__block3"></div>
+							<div class="game__block4"></div>
+							<div class="game__block5"></div>
+							<div class="game__block6"></div>
+							<div class="game__block7"></div>
+							<div class="game__block8"></div>
+							<div class="game__block9"></div>
+							<div class="game__block10">
+								<p>ПОЛУЧИ ЗОЛОТО ФОРТА!ВОРОТА УЖЕ ЗАКРЫВАЮТСЯ!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ./hover -->
+				<!-- CURSOR -->
+				<div id="cursor" class="cursor__container">
+					<h3 class="cursor__title h3-titles">Свойство cursor</h3>
+					<div class="cursor__text">
+						<p>
+							Свойство cursor yстанавливает форму курсора, когда он находится в пределах элемента. Вид курсора
+							зависит от операционной системы и установленных параметров. Также можно устанавливать свои картинки
+							для курсора через url();
+						</p>
+						<p>
+							Автором идеи телеигры «Форт Боярд» стал французский телевизионщик Жак Антуан. Шоу стартовало на
+							французском телевидении в 1990 году. Всё, что просисходило на экране, не имело аналогов в прошлом.
+							Эта игра стала вершиной творчества Жака Антуана. Одной из самых важнейших особенностей игры сам
+							создатель считал её благотворительный аспект. Жак Антуан известен также, как автор нескольких книг
+							и режиссёр целого ряда популярных телешоу и радиопередач.
+						</p>
+					</div>
+					<div class="cursor__example">
+						<p>Посмотрим на примере, проведи мышкой по блоку</p>
+						<div class="cursor__exp">
+							<div class="cursor__block1">context-menu</div>
+							<div class="cursor__block2">help</div>
+							<div class="cursor__block3">pointer</div>
+							<div class="cursor__block4">progress</div>
+							<div class="cursor__block5">cell</div>
+							<div class="cursor__block6">move</div>
+							<div class="cursor__block7">no-drop</div>
+							<div class="cursor__block8">grabbing</div>
+							<div class="cursor__block9">zoom-in</div>
+							<div class="cursor__block10">all-scroll</div>
+							<div class="cursor__block11">copy</div>
+							<div class="cursor__block12">ew-resize</div>
+							<div class="cursor__block13">snake</div>
+							<div class="cursor__block14">tiger</div>
+						</div>
+					</div>
+				</div>
+				<!-- ./cursor -->
+				<!-- ACTIVE -->
+				<div class="active__container">
+					<h3 class="active__title h3-titles">:active</h3>
+					<div class="active__block1"></div>
+					<div class="active__text">
+						<p>
+							Псевдокласс :active позволяет задать стили для элемента, с которым происходит взаимодействие прямо
+							сейчас. Например, можно задать кнопке стиль, который будет виден в тот краткий миг, когда на кнопке
+							зажата клавиша мыши.
+						</p>
+						<p>
+							Никакой сокровищницы в Форте на самом деле нет и никогда не было. Она была придумана создателями
+							игры в 1989 году. На время съёмок декорации, изображающие сокровищницу, монтируются во внутреннем
+							дворе Форта. Каждый сезон художники устанавливают на небольшой площадке пластиковые панели, которые
+							имитируют старинную каменную кладку.
+						</p>
+					</div>
+				</div>
+				<!-- ./active -->
+				<!-- VISITED -->
+				<div class="visited__container">
+					<h3 class="visited__title h3-titles">:visited</h3>
+					<div class="visited__text">
+						<p>
+							Псевдокласс :visited применяется к ссылкам, уже посещённым пользователем, и задаёт для них стилевое
+							оформление.
+						</p>
+						<p>
+							В 1989 году Эрт выставил здание на продажу, и его приобрел за 1,5 млн франков Жак Антуан. Он в свою
+							очередь продал Боярд государству за символическую сумму в 1 франк с условием, что сооружение будет
+							восстановлено и использовано для съемок игрового шоу. Сегодня департамент, которому принадлежит
+							укрепление, ежегодно выделяет на ремонт и поддержание здания от € 200 до 300 тыс.
+						</p>
+					</div>
+					<div class="visited__examples">
+						<ul class="visited__list">
+							<li class="visited__item">
+								<a href="https://www.fortboyard.ru/" target="_blank">
+									Олдскульный сайт о форте
+								</a>
+							</li>
+							<li class="visited__item">
+								<a href="https://www.youtube.com/watch?v=8ydJtGGUyvY&ab_channel=SiteGrb89" target="_blank">
+									Испытание цилиндры
+								</a>
+							</li>
+							<li class="visited__item">
+								<a href="https://www.youtube.com/watch?v=JcUpt3v-B6w&ab_channel=XTREMIST80" target="_blank">
+									Главная тема
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- ./visited -->
+					<!-- FOCUS -->
+					<div class="focus__container">
+						<h3 class="focus__title h3-titles">:focus</h3>
+						<div class="focus__text">
+							<p>
+								Сайтом можно пользоваться не только с использованием мышки, но и при помощи клавиатуры. При
+								переключении клавишей Tab элементу добавляется псевдокласс :focus, и мы можем задать для него
+								красивые стили.
+							</p>
+							<p>
+								Одним из символов шоу стал Паспарту. Его роль исполняет актер Андре Буше, сейчас артисту уже 52
+								года и он по-прежнему продолжает играть свою роль. Буше – самый известный французский
+								актер-карлик и известность ему принес именно телепроект «Форт Боярд». Мало кто знает, что помимо
+								участия в данном проекте и актерской деятельности Буше также работает билетёром в метро.
+							</p>
+						</div>
+						<div class="focus__examples">
+
+							<div class="paspartu">
+								<h3 class="paspartu__title">Паспарту в метро</h3>
+								<div class="paspartu__img"></div>
+							</div>
+							<div class="focus__block1">
+								<div class="focus__btn1">
+									<a href="#">Ссыль 1</a>
+								</div>
+								<div class="focus__btn2">
+									<a href="#">Ссыль 2</a>
+								</div>
+								<div class="focus__btn3">
+									<a href="#">Ссыль 3</a>
+								</div>
+								<div class="focus__btn4">
+									<a href="#">Ссыль 4</a>
+								</div>
+								<div class="focus__btn5">
+									<a href="#">Ссыль 5</a>
+								</div>
+								<div class="focus__btn6">
+									<a href="#">Ссыль 6</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./focus -->
+					<!-- TARGET -->
+					<div id="target" class="target__container">
+						<h3 class="target__title h3-titles">:target</h3>
+						<div class="target__text">
+							<p>
+								Псевдо-класс :target позволяет связать гиперссылку A с любым элементом на странице, при этом
+								значение атрибута href ссылки должно начинаться с символа # и содержать идентификатор id
+								выбранного элемента (якорь). При нажатии на ссылку с идентификатором якоря, псевдо-класс
+								:target применяет заданный стиль к элементу с якорем. То есть, когда мы кликаем по ссылке, в
+								адресе которой содержится фрагмент идентификатора элемента, этот элемент становится целью
+								(отсюда и :target).
+							</p>
+							<p>
+								Самый большой приз за всю историю французских сезонов составил € 37 118 — столько завоевала одна
+								из команд в 2001 году. А вот в 2002-м одна из групп поставила антирекорд: в сокровищнице
+								оказался единственный игрок, который потратил много времени на составление ключевого слова, а
+								поднимаясь по лестнице, упал и растерял бóльшую часть монет. В итоге выигрыш команды был всего €
+								700.
+							</p>
+						</div>
+						<div class="target__examples">
+							<div id="tab1" class="target_window1"></div>
+							<div id="tab2" class="target_window2"></div>
+							<div id="tab3" class="target_window3"></div>
+							<a href="#tab1" class="target__tab1">Tab1</a>
+							<a href="#tab2" class="target__tab2">Tab2</a>
+							<a href="#tab3" class="target__tab3">Tab3</a>
+						</div>
+						<div id="target__off" class="target__off">
+							<a href="#target">Закрыть фотки</a>
+						</div>
+					</div>
+					<!-- ./target -->
+					<!-- STRUCTURE PSEUDOCLASSES -->
+					<div class="structure__container">
+						<h2 id="structure" class="main__subtitle">Структурные псевдоклассы</h2>
+						<div class="structure__content">
+							<p>
+								При помощи этих псевдоклассов можно удобно выбирать элементы по их порядковому номеру внутри
+								родительского элемента.
+							</p>
+							<ul class="structure__list">
+								<li class="structure__item">
+									Псевдокласс <mark>:first-child</mark> - применяет стилевое оформление к первому дочернему
+									элементу своего
+									родителя.
+								</li>
+								<li class="structure__item">
+									Псевдокласс <mark>:first-of-type</mark> применяет заданный стиль к элементу, который является
+									первым
+									дочерним элементом определенного типа внутри родительского элемента.
+								</li>
+								<li class="structure__item">
+									Псевдокласс <mark>:last-child</mark> задает стилевое оформление последнего элемента своего
+									родителя.
+								</li>
+								<li class="structure__item">
+									Псевдокласс <mark>:last-of-type</mark> находит последнего потомка с заданным тегом в списке
+									детей
+									родительского элемента.
+								</li>
+								<li class="structure__item">
+									Псевдокласс <mark>:nth-child</mark> используется для добавления стиля к элементам на основе
+									нумерации в
+									дереве элементов.
+								</li>
+								<li class="structure__item">
+									Псевдокласс <mark>:nth-of-type</mark> используется для добавления стиля к элементам
+									указанного типа на
+									основе нумерации в дереве элементов.
+								</li>
+								<li class="structure__item">
+									Псевдокласс <mark>:not</mark> задаёт правила стилей для элементов, которые не содержат
+									указанный селектор.
+								</li>
+							</ul>
+						</div>
+						<div class="structure__game">
+							<p>Отгадай страну по флагу. Кликни по нему,чтобы узнать правильный ответ</p>
+							<div class="structure__block1">
+								<span class="country1">Poland</span>
+								<ul class="block1__list">
+									<li>1</li>
+									<li>2</li>
+								</ul>
+							</div>
+							<div class="structure__block2">
+								<span class="country2">Armenia</span>
+								<ul class="block2__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block3">
+								<span class="country3">Bulgaria</span>
+								<ul class="block3__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block4">
+								<span class="country4">Estonia</span>
+								<ul class="block4__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block5">
+								<span class="country5">Latvia</span>
+								<ul class="block5__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block6">
+								<span class="country6">Germany</span>
+								<ul class="block6__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block7">
+								<span class="country7">Indonesia</span>
+								<ul class="block7__list">
+									<li>1</li>
+									<li>2</li>
+								</ul>
+							</div>
+							<div class="structure__block8">
+								<span class="country8">Luxembourg</span>
+								<ul class="block8__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block9">
+								<span class="country9">Lithuania</span>
+								<ul class="block9__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block10">
+								<span class="country10">Austria</span>
+								<ul class="block10__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+							<div class="structure__block11">
+								<span class="country11">Thailand</span>
+								<ul class="block11__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+									<li>4</li>
+									<li>5</li>
+								</ul>
+							</div>
+							<div class="structure__block12">
+								<span class="country12">Hungary</span>
+								<ul class="block12__list">
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- ./structure pseudoclasses -->
+					<!-- PSEUDOELEMENTS -->
+					<div class="pseudoelements__container">
+						<h2 id="pseudoelements" class="main__subtitle">Псевдоэлементы</h2>
+						<div class="pseudoelements__text">
+							<p>
+								Использование псевдоэлементов <mark>::after</mark> и <mark>::before</mark> является одним
+								из самых популярных приёмов при
+								вёрстке фрагментов веб-страниц и их стилизации. С их помощью можно выводить произвольный текст,
+								добавлять тени, треугольники, линии и др.
+								<br>
+								Фактически, <mark>::after</mark> и <mark>::before</mark> заменяют собой два обычных элемента в
+								коде HTML, к которым можно
+								добавлять любое стилевое оформление. Но поскольку мы всё делаем через CSS, то в полной мере
+								сохраняется принцип разделения содержания и оформления. Тем самым, код HTML остаётся простым и
+								чистым, а дизайн элементов возлагается на CSS.
+							</p>
+						</div>
+						<div class="pseudoelements__examples">
+							<div class="exp__block1">
+								<ul class="exp__list">
+									<li class="exp__item">
+										Премьера русской версии французского проекта состоялась в 1998 году.
+									</li>
+									<li class="exp__item">
+										Крепость находится в Атлантическом океане в Бискайском заливе недалеко от города
+										Ла-Рошель,
+										Франция.
+									</li>
+									<li class="exp__item">
+										В стратегических целях крепость ни разу не применялась, зато долгое время служила местом
+										содержания под стражей политзаключенных.
+									</li>
+									<li class="exp__item">
+										На сегодняшний день программа адаптирована в 70 странах.
+									</li>
+									<li class="exp__item">
+										Всего во французской версии игроками было выиграно суммарно 3 223 131 евро
+									</li>
+								</ul>
+							</div>
+							<div class="exp__block2">
+								<p>Поставим с помощью псевдо элемента скобочки после цифр</p>
+								<ol class="exp__block2_list">
+									<li class="exp__block2_item">Первый пункт</li>
+									<li class="exp__block2_item">Второй пункт</li>
+									<li class="exp__block2_item">Третий пункт</li>
+									<li class="exp__block2_item">Четвертый пункт</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- ./pseudoelements -->
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<p class="footer__text">&copy; Anton Morozov, 2022</p>
+		</footer>
+	</div>
+</body>
+
+</html>
